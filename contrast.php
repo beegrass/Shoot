@@ -5,5 +5,4 @@
 ?>
 
 <p>contrast</p>
-    </body>
-</html>
+<?php include('assets/inc/footer.php'); ?>

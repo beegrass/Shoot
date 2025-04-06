@@ -5,5 +5,4 @@
 ?>
 
     <p>home</p>
-    </body>
-</html>
+    <?php include('assets/inc/footer.php'); ?>

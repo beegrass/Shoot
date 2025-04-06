@@ -4,5 +4,4 @@
     include('assets/inc/nav.php');
 ?>
 <p>repetition</p>
-    </body>
-</html>
+<?php include('assets/inc/footer.php'); ?>
