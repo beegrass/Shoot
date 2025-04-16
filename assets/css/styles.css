@@ -1,218 +1,224 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 :root {
+    box-sizing: border-box;
+
     --white: #f2f5f8;
     --rich-black: #001829;
-    --gunmetal: #192f3d;
+    --gunmetal: #152732;
     --lake-blue: #778da9;
     --saffron: #fec74e;
     --logo: url("../images/shoot_logo.png");
 }
 
-* {
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
     margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-    background-color: var(--white);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
 }
 
-a {
-    color: var(--white);
-}
-
-/* header */
-
-.header {
+/* ------------------------- NAVBAR STYLING START ------------------------- */
+/* followed Responsive Multi Level Dropdown Menu with CSS tutorial by smashtheshell  */
+header {
     background-color: var(--rich-black);
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1.5rem;
-    justify-content: center;
+    padding-left: 1.5rem;
 }
 
-.header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    color: var(--white);
-}
-
-.header li * {
+.logo {
     display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-    color: var(--saffron);
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    padding: 14px 16px;
-    background: none;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #F2F5F8;
-    min-width: 160px;
-    top: 100%;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    margin: 0;
-}
-
-.dropdown-content li:hover {
-    background-color: #FEC74E;
-}
-
-.dropbtn:hover .dropdown-content {
-    display: block;
-    background-color: #001829;
-}
-
-.header .logo {
-    display: block;
-    float: left;
-    padding: 1em;
-    width: 150px;
+    width: 200px;
     height: 50px;
-    margin-left: 1em;
     background-image: var(--logo);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/* menu */
-
-.header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* menu icon */
-
-.header .menu-icon {
-    cursor: pointer;
-    padding: 28px 20px;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    user-select: none;
+.menu {
+    display: flex;
+    flex-direction: row;
 }
 
-.header .menu-icon .navicon {
-    background: var(--white);
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
     display: block;
-    height: 2px;
+    text-decoration: none;
+    color: var(--saffron);
+    padding: 1em 1.5em;
+    font-size: 1.3rem;
+}
+
+/* Styling submenu */
+.has-dropdown {
     position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
 }
 
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
+.submenu {
     position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-    top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-    top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-    display: none;
-}
-
-.header .menu-btn:checked~.menu {
-    max-height: 360px;
+    left: 0;
+    background-color: var(--rich-black);
     border-top: 1px solid var(--saffron);
+    white-space: no-wrap;
+    padding: 1.5em 0;
+    min-width: 10em;
+
+    /* hide submenu initially */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon {
-    background: transparent;
+.submenu>li>a {
+    padding: 0.8em 1.5em;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
+.menu>li:hover>a,
+.submenu>li:hover a {
+    color: var(--lake-blue);
+    /* contrast ratio with bg is 5.3:1 */
+}
+
+.menu>li:hover>a {
+    background-color: var(--gunmetal);
+}
+
+/* Arrows */
+.arrow {
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
     transform: rotate(-45deg);
+    margin-top: -.25em;
+    transition: transform 100ms ease-in-out;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
+/* reveal */
+.menu>li:hover>a+.submenu {
+    opacity: 1;
+    transform: scaleY(1);
 }
 
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-    top: 0;
+/* animate arrows */
+.menu>li:hover>a>.arrow {
+    transform: rotate(-135deg);
 }
 
-/* 48em = 768px */
-
-@media (min-width: 950px) {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+/* responsiveness for mobile screens */
+@media only screen and (max-width: 900px) {
+    header {
+        position: relative;
+        padding: 1.5em 2em;
     }
 
-    .header li {
-        float: left;
+    .menu {
+        flex-flow: column;
+        position: absolute;
+        background-color: var(--rich-black);
+        top: 6.125em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+
+        /* hide menu initally */
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 
+        100ms opacity ease-in-out;
     }
 
-    .header li a {
-        padding: 20px 30px;
+    .menu>li>a {
+        font-size: 1.5rem;
     }
 
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
+    .submenu>li>a {
+        font-size: 1.5rem;
     }
 
-    .header .menu-icon {
-        display: none;
+    .submenu {
+        top: 0;
+        padding: 0 1.5em;
     }
 
-    .header .menu-btn:checked~.menu {
-        max-height: 360px;
-        border-top: none;
+    .menu>li:hover>a+.submenu {
+        position: relative;
+    }
+
+    /* hamburger icon */
+    .hamburger {
+        cursor: pointer;
+        padding: 28px 20px;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        user-select: none;
+    }
+
+    .hamburger .navicon {
+        background: var(--saffron);
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+
+    /* gives the top and bottom lines */
+    .hamburger .navicon::after,
+    .hamburger .navicon::before {
+        background: var(--saffron);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    .hamburger .navicon:before {
+        top: 5px;
+    }
+    
+    .hamburger .navicon:after {
+        top: -5px;
+    }
+
+    .close .navicon {
+        background: transparent;
+    }
+
+    .close .navicon::before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .close .navicon::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
+    /* reveal menu */
+    input[type="checkbox"]:checked + .menu {
+        position: absolute;
+        opacity: 1;
+        transform: scaleY(1);
+        border-top: 0.5px solid var(--saffron);
     }
 }
+/* ------------------------- NAVBAR STYLING END ------------------------- */
