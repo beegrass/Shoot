@@ -64,3 +64,32 @@ nav a {
 nav a:not(.dropdown-content a):hover{
     color: #FEC74E;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #001829;
+    color: #F2F5F8;
+}
+
+footer > .names {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px;
+}
+
+footer > .group {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px;
+}
+
+@media only screen and (max-width: 620px){
+    footer > .names {
+        display: block;
+    }
+
+    footer > .group {
+        display: block;
+    }
+}
