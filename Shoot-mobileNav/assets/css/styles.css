@@ -1,0 +1,578 @@
+:root {
+    box-sizing: border-box;
+
+    --white: #f2f5f8;
+    --rich-black: #001829;
+    --gunmetal: #152732;
+    --lake-blue: #778da9;
+    --saffron: #fec74e;
+    --logo: url("../images/shoot_logo.png");
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+}
+
+/* ------------------------- NAVBAR STYLING START ------------------------- */
+/* followed Responsive Multi Level Dropdown Menu with CSS tutorial by smashtheshell  */
+header {
+    background-color: var(--rich-black);
+    padding-left: 1.5rem;
+}
+
+.logo {
+    display: block;
+    width: 250px;
+    height: 75px;
+    margin: 15px 0 15px 0;
+    background-image: var(--logo);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 10000;
+
+    
+}
+
+.menu li {
+    list-style: none;
+}
+.menu ul
+{
+    flex-grow: 1;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--saffron);
+    padding: 1em 1.5em;
+    font-size: 1.6rem;
+}
+
+/* Styling submenu */
+.has-dropdown {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    background-color: var(--rich-black);
+    border-top: 1px solid var(--saffron);
+    white-space: no-wrap;
+    padding: 1.5em 0;
+    min-width: 10em;
+
+    /* hide submenu initially */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.submenu>li>a {
+    padding: 0.8em 1.5em;
+}
+
+.menu>li:hover>a,
+.submenu>li:hover a {
+    color: var(--lake-blue);
+    /* contrast ratio with bg is 5.3:1 */
+}
+
+.menu>li:hover>a {
+    background-color: var(--gunmetal);
+}
+
+/* Arrows */
+.arrow {
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-45deg);
+    margin-top: -.25em;
+    transition: transform 100ms ease-in-out;
+}
+
+/* reveal */
+.menu>li:hover>a+.submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* animate arrows */
+.menu>li:hover>a>.arrow {
+    transform: rotate(-135deg);
+}
+
+/* fixed a bug with the menu content expanding off the page at certain widths with the 2 @media queries below - robbie*/
+@media (max-width: 1106px) 
+{
+    .menu>li>a {
+        font-size: 1.3rem;
+    }
+
+    .submenu>li>a {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 948px) 
+{
+    .menu>li>a {
+        font-size: 1.2rem;
+    }
+
+    .submenu>li>a {
+        font-size: 1.2rem;
+    }
+}
+
+/* responsiveness for mobile screens */
+@media only screen and (max-width: 900px) {
+    header {
+        position: relative;
+        padding: 1.5em 2em;
+    }
+
+    .menu {
+        flex-flow: column;
+        position: absolute;
+        background-color: var(--rich-black);
+        top: 6.125em;
+        left: 0;
+        right: 0;
+        height: fit-content;
+
+        /* hide menu initally */
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 
+        100ms opacity ease-in-out;
+    }
+
+    .menu>li>a {
+        font-size: 1.5rem;
+    }
+
+    .submenu>li>a {
+        font-size: 1.5rem;
+    }
+
+    .submenu {
+        top: 0;
+        padding: 0 1.5em;
+    }
+
+    .menu>li:hover>a+.submenu {
+        position: relative;
+    }
+
+    /* hamburger icon */
+    .hamburger {
+        cursor: pointer;
+        padding: 28px 20px;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        user-select: none;
+    }
+
+    .hamburger .navicon 
+    {
+        background: var(--saffron);
+        display: block;
+        width: 50px;
+        height: 5px;
+        position: relative;
+        margin-top: 10px;
+        transition: background .2s ease-out;
+ 
+    }
+
+    /* gives the top and bottom lines */
+    .hamburger .navicon::after,
+    .hamburger .navicon::before {
+        background: var(--saffron);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    .hamburger .navicon:before {
+        top: 15px;
+    }
+    
+    .hamburger .navicon:after {
+        top: 30px;
+    }
+
+    .close .navicon {
+        background: transparent;
+    }
+
+    .close .navicon::before {
+        transform: rotate(-45deg);
+        top: 15px;
+    }
+    .close .navicon::after {
+        transform: rotate(45deg);
+        top: 15px;
+    }
+
+    /* reveal menu */
+    input[type="checkbox"]:checked + .menu {
+        position: absolute;
+        margin-top: 20px;
+        opacity: 1;
+        transform: scaleY(1);
+        border-top: 0.5px solid var(--saffron);
+    }
+}
+
+
+/* ------------------------- NAVBAR STYLING END ------------------------- */
+
+/* ------------------------- HOME PAGE AND WORKS CITED STYLING -------------------------- */
+.home-hero
+{
+    width: 100%;
+    align-items: center;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    position: relative;
+}
+.hero-container h1
+{
+    position: absolute;
+    font-size: 15em;
+    bottom: 25%;
+    left: 10%;
+    color: #f4f4f4;
+    text-align: left;
+    z-index: 100;
+    width: fit-content;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-container h2
+{
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+    font-size: 3em;
+    bottom: 20%;
+    left: 10%;
+    color: #f4f4f4;
+    text-align: left;
+    z-index: 100;
+    width: fit-content;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-container 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+}
+.home-card-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+}
+.home-card-container a
+{
+    width: 35%;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+.home-card
+{
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 0 10px;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.home-card-image
+{
+    width:100%;
+    height: calc(100% - 80px);
+    object-fit: cover; 
+    border-radius: 10px;
+}
+.home-card:hover 
+{
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.home-card h3
+{
+    margin-top: 20px;
+}
+.home-card-container > p
+{
+    text-align: center;
+    width: 100%;
+}
+.bold_cards
+{
+    font-weight: bold;
+}
+.home-card-container p
+{
+    font-size: 2em;
+}
+.home-card p
+{
+    font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    line-height: 1.75em;
+    margin-top: 15px;
+}
+.hero-container h1#wc 
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    width: max-content;
+    text-align: center;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.works-cited-container
+{
+    font-family: 'Lato', sans-serif;
+}
+.works-cited-container h2
+{
+    font-size: 3em;
+    margin: 50px 50px 20px 100px;
+}
+.works-cited-container p
+{
+    margin-left: 100px;
+    font-size: 1.3em;
+    font-weight:bold;
+    font-style: italic;
+}
+.works-cited-container a
+{
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight:normal;
+    display: block;
+}
+.works-cited-container a:nth-last-of-type(1)
+{
+    margin-bottom: 75px;
+}
+
+@media (max-width: 1024px) {
+    .hero-container h1 {
+        font-size: 10em;
+        left: 5%;
+    }
+
+    .hero-container h2 {
+        font-size: 3em;
+        left: 5%;
+    }
+
+    .home-card-container a {
+        width: 45%;
+    }
+
+    .home-card {
+        height: 60vh;
+    }
+    
+    .works-cited-container h2 {
+        margin: 40px 40px 20px 60px;
+        font-size: 2.5em;
+    }
+    
+    .works-cited-container p,
+    .works-cited-container a {
+        margin-left: 60px;
+        font-size: 1.2em;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .hero-container h1 {
+        font-size: 7em;
+    }
+
+    .hero-container h2 {
+        font-size: 2em;
+    }
+
+    .home-card-container {
+        gap: 30px;
+        padding: 30px 10px;
+    }
+    .home-card-container p
+    {
+        font-size: 1.5em;
+    }
+    .home-card-container a {
+        width: 90%;
+    }
+
+    .home-card {
+        height: auto;
+        padding: 15px;
+    }
+
+    .home-card-image {
+        height: 250px;
+    }
+
+    .home-card p {
+        font-size: 1.1em;
+    }
+    .works-cited-container h2 {
+        margin: 30px 30px 20px 30px;
+        font-size: 2em;
+    }
+    
+    .works-cited-container p,
+    .works-cited-container a {
+        margin-left: 30px;
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 480px) 
+{
+    .hero-container h1 
+    {
+        font-size: 5em;
+    }
+
+    .hero-container h2 {
+        font-size: 1.5em;
+    }
+
+    .home-card-container a {
+        width: 100%;
+    }
+
+    .home-card {
+        height: auto;
+        margin: 0
+    }
+
+    .home-card-image {
+        height: 200px;
+    }
+
+    .home-card p {
+        font-size: 1em;
+    }
+    .logo
+    {
+        width: 180px;
+        height: 60px;
+        margin: 0;
+    }
+    .hamburger {
+        cursor: pointer;
+        padding: 28px 20px;
+        position: absolute;
+        right: .5em;
+        top: -.25em;
+        user-select: none;
+    }
+    .works-cited-container h2 {
+        margin: 25px 20px 15px 20px;
+        font-size: 1.5em;
+        text-align: left;
+    }
+    
+    .works-cited-container p,
+    .works-cited-container a {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
+        word-break: break-word;
+    }
+}
+/* HOMEPAGE END */
+footer 
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #001829;
+    color: #F2F5F8;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+}
+
+footer > .names {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px;
+}
+
+footer > .group {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 12px;
+}
+
+@media only screen and (max-width: 620px){
+    footer > .names {
+        display: block;
+    }
+
+    footer > .group {
+        display: block;
+    }
+}
