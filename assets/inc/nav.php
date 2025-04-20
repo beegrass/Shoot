@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- https://stackoverflow.com/questions/59820346/how-to-turn-the-navbar-into-a-hamburger-menu-when-on-mobile -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
