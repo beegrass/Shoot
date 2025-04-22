@@ -1,7 +1,7 @@
 <?php 
-    $title = 'Works Cited';
-    $filename = 'works_cited.php';
+    $title = 'Alignment';
+    $filename = 'alignment.php';
     include('assets/inc/nav.php');
 ?>
-<p>wc</p>
+<p>alignment</p>
 <?php include('assets/inc/footer.php'); ?>
