@@ -65,6 +65,45 @@ nav a:not(.dropdown-content a):hover{
     color: #FEC74E;
 }
 
+main{
+    margin: 32px 32px;
+}
+
+.hero-container > .contrast-hero
+{
+    width: 100%;
+    align-items: center;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    position: relative;
+}
+.hero-container h1
+{
+    position: absolute;
+    font-size: 15em;
+    color: #f4f4f4;
+    text-align: center;
+    z-index: 100;
+    width: fit-content;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-container 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+}
+
+.main-image img{
+    width: 25%;
+    float: right;
+}
+
 footer {
     display: flex;
     flex-direction: column;
