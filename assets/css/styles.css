@@ -1,66 +1,224 @@
-body {
-    font-family: 'Lato', 'Bebas Neue';
-    padding: 0;
-    margin: 0;
-    background-color: #F2F5F8;
+:root {
+    box-sizing: border-box;
+
+    --white: #f2f5f8;
+    --rich-black: #001829;
+    --gunmetal: #152732;
+    --lake-blue: #778da9;
+    --saffron: #fec74e;
+    --logo: url("../images/shoot_logo.png");
 }
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+}
+
+/* ------------------------- NAVBAR STYLING START ------------------------- */
+/* followed Responsive Multi Level Dropdown Menu with CSS tutorial by smashtheshell  */
 header {
+    background-color: var(--rich-black);
+    padding-left: 1.5rem;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-image: var(--logo);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
     display: flex;
     flex-direction: row;
-    background-color: #001829;
 }
-nav {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 30px;
-    width: 50%;
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--saffron);
+    padding: 1em 1.5em;
+    font-size: 1.3rem;
+}
+
+/* Styling submenu */
+.has-dropdown {
     position: relative;
 }
-nav a {
-    color: #F2F5F8;
-    text-align: center;
-    margin-left: 2vw;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropbtn {
-    padding: 14px 16px;
-    font-size: 1.2em;
-    background: none;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-}
-.dropdown-content {
-    display: none;
+
+.submenu {
     position: absolute;
-    background-color: #F2F5F8;
-    min-width: 160px;
-    top: 100%;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
+    left: 0;
+    background-color: var(--rich-black);
+    border-top: 1px solid var(--saffron);
+    white-space: no-wrap;
+    padding: 1.5em 0;
+    min-width: 10em;
+
+    /* hide submenu initially */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
 }
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    margin: 0;
+
+.submenu>li>a {
+    padding: 0.8em 1.5em;
 }
-.dropdown-content a:hover {
-    background-color: #FEC74E;
+
+.menu>li:hover>a,
+.submenu>li:hover a {
+    color: var(--lake-blue);
+    /* contrast ratio with bg is 5.3:1 */
 }
-.dropdown:hover .dropdown-content {
-    display: block;
+
+.menu>li:hover>a {
+    background-color: var(--gunmetal);
 }
-nav a:not(.dropdown-content a):hover{
-    color: #FEC74E;
+
+/* Arrows */
+.arrow {
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate(-45deg);
+    margin-top: -.25em;
+    transition: transform 100ms ease-in-out;
 }
+
+/* reveal */
+.menu>li:hover>a+.submenu {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* animate arrows */
+.menu>li:hover>a>.arrow {
+    transform: rotate(-135deg);
+}
+
+/* responsiveness for mobile screens */
+@media only screen and (max-width: 900px) {
+    header {
+        position: relative;
+        padding: 1.5em 2em;
+    }
+
+    .menu {
+        flex-flow: column;
+        position: absolute;
+        background-color: var(--rich-black);
+        top: 6.125em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+
+        /* hide menu initally */
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 
+        100ms opacity ease-in-out;
+    }
+
+    .menu>li>a {
+        font-size: 1.5rem;
+    }
+
+    .submenu>li>a {
+        font-size: 1.5rem;
+    }
+
+    .submenu {
+        top: 0;
+        padding: 0 1.5em;
+    }
+
+    .menu>li:hover>a+.submenu {
+        position: relative;
+    }
+
+    /* hamburger icon */
+    .hamburger {
+        cursor: pointer;
+        padding: 28px 20px;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        user-select: none;
+    }
+
+    .hamburger .navicon {
+        background: var(--saffron);
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+
+    /* gives the top and bottom lines */
+    .hamburger .navicon::after,
+    .hamburger .navicon::before {
+        background: var(--saffron);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    .hamburger .navicon:before {
+        top: 5px;
+    }
+    
+    .hamburger .navicon:after {
+        top: -5px;
+    }
+
+    .close .navicon {
+        background: transparent;
+    }
+
+    .close .navicon::before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+    .close .navicon::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
+    /* reveal menu */
+    input[type="checkbox"]:checked + .menu {
+        position: absolute;
+        opacity: 1;
+        transform: scaleY(1);
+        border-top: 0.5px solid var(--saffron);
+    }
+}
+/* ------------------------- NAVBAR STYLING END ------------------------- */
