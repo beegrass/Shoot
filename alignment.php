@@ -6,19 +6,19 @@ include('assets/inc/nav.php');
 $heroImg = "assets/images/alignment-hero.jpg";
 $mainImg = "assets/images/alignment-content.jpg";
 $imgAltText = "Planets in alignment";
-$principleDesc = "<bold>Alignment</bold> refers to arranging 
+$principleDesc = "<b>Alignment</b> refers to arranging 
         elements in a way that creates order and organization on your site.
         In web design, tools like grids, columns and flexbox enforce proper
         alignment.";
 $descList = array(
-    "<bold>Text Consistency:</bold> Ensure that Text
+    "<b>Text Consistency:</b> Ensure that Text
                     elements such as headings, body text, and buttons are properly
                     aligned, creating a clear visual flow that guides the user's eye
                     across the page",
-    "<bold>UI Design:</bold> Buttons, icons, and navigation menus should align
+    "<b>UI Design:</b> Buttons, icons, and navigation menus should align
                     with other page elements, ensuring a clean and structured layout. Proper alignment
                     reinforces a sense of order and organization.",
-    "<bold>Spacing & Layout:</bold> Maintain consistent alignment throughout the layout.
+    "<b>Spacing & Layout:</b> Maintain consistent alignment throughout the layout.
                     Aligning elements horizontally or vertically ensures that the page doesn't feel chaotic,
                     improving readability and visual appeal."
 );

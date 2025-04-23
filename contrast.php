@@ -9,10 +9,11 @@ $imgAltText = "Astronaut floating in space";
 $principleDesc = "<b>Contrast</b> refers to the difference between elements, such as test and background,
         to ensure readability and accessibility.";
 $descList = array(
-    "Typography Consistency: Using the same fonts and styles for headings, body text, and buttons.",
-    "Color Scheme: Maintaining a consistent palette across the website.",
-    "UI Elements: Keeping button styles, icons, and navigation menus uniform.",
-    "Spacing & Layout: Ensuring consistent padding, margins, and grid structures."
+    "<b>Color Contrast:</b> difference in brightness and hue between text, backgrounds, and UI elements",
+    "<b>Size Contrast:</b> like different sized fonts or element proportions",
+    "<b>Shape Contrast:</b> differentiating buttons, icons, and other elements through shape",
+    "<b>Typography Contrast:</b> using different font weights, styles, or families",
+    "<b>Spatial Contrast:</b> using white-space to separate and emphasize content"
 );
 
 $importance = "Repetition creates cohesion and unity among your pages, which makes the site easier to navigate and aesthetically pleasing. <br><br> 
@@ -27,18 +28,18 @@ $accessibility = "All users can benefit from the proper implementation of repeti
 include('assets/inc/principle.php');
 ?>
 
-    <div class="box-container">
-        <div class="contrast with">
-            <img src="assets/images/bcontrast.jpg">
-        </div>
-        <div class="contrast without">
-            <img src="assets/images/gcontrast.jpg">
-        </div>   
+<div class="box-container">
+    <div class="contrast with">
+        <img src="assets/images/bcontrast.jpg">
     </div>
+    <div class="contrast without">
+        <img src="assets/images/gcontrast.jpg">
+    </div>
+</div>
 
-    <script src="assets/scripts/script.js"></script>
+<script src="assets/scripts/script.js"></script>
 
-    <small>Play Around with the before and after slider to see how contrast matters!</small>
-    </section>
+<small>Play Around with the before and after slider to see how contrast matters!</small>
+</section>
 </main>
 <?php include('assets/inc/footer.php'); ?>

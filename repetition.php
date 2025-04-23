@@ -8,10 +8,10 @@ $mainImg = "assets/images/repetition-content.jpg";
 $imgAltText = "Surface of the moon";
 $principleDesc = "<b>Repetition</b> refers to the consistent use of design elements in a site. Some elements that should use consistency are the colors, fonts, the general layout and the imagery included.";
 $descList = array(
-    "Typography Consistency: Using the same fonts and styles for headings, body text, and buttons.",
-    "Color Scheme: Maintaining a consistent palette across the website.",
-    "UI Elements: Keeping button styles, icons, and navigation menus uniform.",
-    "Spacing & Layout: Ensuring consistent padding, margins, and grid structures."
+    "<b>Typography Consistency:</b> Using the same fonts and styles for headings, body text, and buttons.",
+    "<b>Color Scheme:</b> Maintaining a consistent palette across the website.",
+    "<b>UI Elements:</b> Keeping button styles, icons, and navigation menus uniform.",
+    "<b>Spacing & Layout:</b> Ensuring consistent padding, margins, and grid structures."
 );
 
 $importance = "Repetition creates cohesion and unity among your pages, which makes the site easier to navigate and aesthetically pleasing. <br><br> 
