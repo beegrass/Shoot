@@ -1,8 +1,32 @@
-<?php 
-    $title = 'Contrast';
-    $filename = 'contrast.php';
-    include('assets/inc/nav.php');
+<?php
+$title = 'Contrast';
+$filename = 'contrast.php';
+include('assets/inc/nav.php');
+
+$heroImg = "assets/images/contrast-hero.jpg";
+$mainImg = "assets/images/contrast-astro.jpg";
+$imgAltText = "Astronaut floating in space";
+$principleDesc = "<b>Contrast</b> refers to the difference between elements, such as test and background,
+        to ensure readability and accessibility.";
+$descList = array(
+    "Typography Consistency: Using the same fonts and styles for headings, body text, and buttons.",
+    "Color Scheme: Maintaining a consistent palette across the website.",
+    "UI Elements: Keeping button styles, icons, and navigation menus uniform.",
+    "Spacing & Layout: Ensuring consistent padding, margins, and grid structures."
+);
+
+$importance = "Repetition creates cohesion and unity among your pages, which makes the site easier to navigate and aesthetically pleasing. <br><br> 
+                    Repetition enhances readability by creating a structured layout, creating familiarity for the user to guide the eye and improve the flow of your content reading. <br><br>
+                    A consistent structure can help users predict where key elements are, such as the nav bar, creating a better experience for users.";
+
+$whyUse = "";
+
+$accessibility = "All users can benefit from the proper implementation of repetition. Through the consistency and predictability of a site's layout, content structure, and navigation, the cognitive load on a user is decreased, as they will only need to take in those elements once and will better retain the information that a site is conveying. <br><br>
+                        A repetition of style can also benefit those with color blindness, as they won't need to interpret the color schemes of each individual page.";
+
+include('assets/inc/principle.php');
 ?>
+
 <div class="hero-container">
     <h1>Contrast</h1>
     <img src="assets/images/contrast-hero.jpg" alt="contrast header" class="contrast-hero">
@@ -11,8 +35,8 @@
     <aside class="main-image"><img src="assets/images/contrast-astro.jpg" alt="astronaut"></aside>
 
     <h2>What Is It?</h2>
-    <p><b>Contrast</b> refers to the difference between elements, such as test and background, 
-    to ensure readability and accessibility.</p>
+    <p><b>Contrast</b> refers to the difference between elements, such as test and background,
+        to ensure readability and accessibility.</p>
 
     <p>There are five main types of contrast when it comes to web design. These types are:</p>
 
@@ -25,15 +49,15 @@
     </ul>
 
     <h2>Importance</h2>
-    <p>Contrast is crucial to make websites accessible to people with visual impairments like color blindness, low 
-        vision, and cognitive disabilities. Besides making websites readable, it 
+    <p>Contrast is crucial to make websites accessible to people with visual impairments like color blindness, low
+        vision, and cognitive disabilities. Besides making websites readable, it
         also guides user attention and can be used to create a visual hierarchy.</p>
 
     <h3>Why Use It?</h3>
     <p>The contrast principle should be properly implemented in all webpages for the benefit of the reader as well as for the one who created the webpage.
-    As previously stated, contrast greatly improves the readability of a website/webpage by allowing readers to easily digest information on a page without having to strain their eyes or focus in on certain areas that have blended in with the background.
-    It also helps readers to discern the overall layout and hierarchy of a website/webpage, allowing the readers to discover and understand important elements and concepts of the website that the author is trying to convey, increasing overall understanding. Lastly, readers who have visual impairments will have difficulty
-    reading through the content of a website when contrast isn't being properly applied. Therefore, by following the accessibility standards below, the author of the website can increase its usability across a wider audience. 
+        As previously stated, contrast greatly improves the readability of a website/webpage by allowing readers to easily digest information on a page without having to strain their eyes or focus in on certain areas that have blended in with the background.
+        It also helps readers to discern the overall layout and hierarchy of a website/webpage, allowing the readers to discover and understand important elements and concepts of the website that the author is trying to convey, increasing overall understanding. Lastly, readers who have visual impairments will have difficulty
+        reading through the content of a website when contrast isn't being properly applied. Therefore, by following the accessibility standards below, the author of the website can increase its usability across a wider audience.
     </p>
 
     <h2>Accessibility</h2>
