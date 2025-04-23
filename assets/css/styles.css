@@ -441,8 +441,6 @@ footer>.group {
 }
 
 /* QUIZ PAGE */
-
-
 .quiz-card {
     font-weight: normal;
     font-family: "Lato", sans-serif;
@@ -621,4 +619,41 @@ footer>.group {
     max-width: 100%;
     box-shadow: 1px 1px 5px var(--lake-blue);
     margin: 1em 0;
+}
+
+/* Contrast Slider Styling */
+.box-container {
+    position: relative;
+    height: 400px;
+    margin-inline: auto;
+}
+
+.contrast {
+    position: absolute;
+    overflow:hidden;
+}
+
+.contrast img {
+    width: 600px;
+    height: 400px;
+
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider {
+    position: absolute;
+    z-index: 999;
+    cursor: ew-resize;
+ 
+    width: 24px;
+    height: 24px;
+    background-color: #F2F5F8;
+    border: 2px solid #001829;
+    border-radius: 32px;
+}
+
+small {
+    text-align: center;
 }
