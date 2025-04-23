@@ -69,7 +69,7 @@
         </div>   
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/scripts/script.js"></script>
 
     <small>Play Around with the before and after slider to see how contrast matters!</small>
 </main>
