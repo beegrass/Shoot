@@ -5,7 +5,7 @@
 ?>
 <main>
     <div class="hero-container">
-        <h1>CRAP</h1>
+        <h1 class="home-h1">CRAP</h1>
         <h2>Design Principles</h2>
         <img src="assets/images/home_hero.jpg" alt="header image" class="home-hero">
     </div>
