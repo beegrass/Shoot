@@ -2,6 +2,10 @@
     $title = 'Alignment';
     $filename = 'alignment.php';
     include('assets/inc/nav.php');
+
+    $principleName = "Alignment";
+
+
 ?>
 <main>
     <div class="sub-container">
