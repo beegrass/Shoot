@@ -51,8 +51,6 @@ header {
     flex-direction: row;
     position: relative;
     z-index: 10000;
-
-    
 }
 
 .menu li {
@@ -321,6 +319,7 @@ h1
     height: auto;
     position: relative;
 }
+
 .home-card-container
 {
     display: flex;
@@ -394,6 +393,70 @@ h1
     object-fit: cover; 
     border-radius: 10px;
 }
+
+.contrast-main {
+    margin: 32px 32px;
+    font-family: "Lato", sans-serif;
+}
+
+.contrast-hero
+{
+    width: 100%;
+    align-items: center;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    position: relative;
+}
+
+.main-image img{
+    width: 25%;
+    float: right;
+    border-radius: 6px;
+}
+
+.contrast-main {
+    line-height: normal;
+}
+
+* {box-sizing: border-box;}
+
+.box-container {
+    position: relative;
+    height: 400px;
+    margin-inline: auto;
+}
+
+.contrast {
+    position: absolute;
+    overflow:hidden;
+}
+
+.contrast img {
+    width: 600px;
+    height: 400px;
+
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider {
+    position: absolute;
+    z-index: 999;
+    cursor: ew-resize;
+ 
+    width: 24px;
+    height: 24px;
+    background-color: #F2F5F8;
+    border: 2px solid #001829;
+    border-radius: 32px;
+}
+
+small {
+    text-align: center;
+}
+
 .works-cited-container
 {
     font-family: 'Lato', sans-serif;
