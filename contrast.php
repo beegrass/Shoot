@@ -37,8 +37,6 @@ include('assets/inc/principle.php');
     </div>
 </div>
 
-<script src="assets/scripts/script.js"></script>
-
 <small>Play Around with the before and after slider to see how contrast matters!</small>
 </section>
 </main>

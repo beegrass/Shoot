@@ -630,14 +630,14 @@ footer>.group {
 
 .contrast {
     position: absolute;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .contrast img {
     width: 600px;
     height: 400px;
 
-    display:block;
+    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -646,7 +646,7 @@ footer>.group {
     position: absolute;
     z-index: 999;
     cursor: ew-resize;
- 
+
     width: 24px;
     height: 24px;
     background-color: #F2F5F8;
@@ -656,4 +656,49 @@ footer>.group {
 
 small {
     text-align: center;
+}
+
+/* Alignment styles */
+.alignment-box {
+    max-width: 800px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #001829;
+    box-sizing: border-box;
+}
+
+.desc {
+    color: #F2F5F8;
+}
+
+#stars .row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    font-size: 2rem;
+    color: #FEC74E;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: #F2F5F8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button.active {
+    background: #708099;
+    color: #F2F5F8;
 }

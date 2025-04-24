@@ -38,16 +38,18 @@ $accessibility = "A site's accessibility is improved through proper alignment, a
 
 include('assets/inc/principle.php');
 ?>
-<!-- <section class="alignment-box"> -->
-<div id="stars"></div>
 
-<div class="buttons">
-    <button data-align="flex-start" class="active">Left</button>
-    <button data-align="center">Center</button>
-    <button data-align="flex-end">Right</button>
-</div>
+<section class="alignment-box">
+    <div id="stars"></div>
 
-<p class="desc">Play around with these alignment controls to see why alignment is so critical</p>
+    <div class="buttons">
+        <button data-align="flex-start" class="active">Left</button>
+        <button data-align="center">Center</button>
+        <button data-align="flex-end">Right</button>
+    </div>
+
+    <p class="desc">Play around with these alignment controls to see why alignment is so critical</p>
+</section>
 </section>
 </main>
 <?php include('assets/inc/footer.php'); ?>
