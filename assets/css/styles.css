@@ -492,7 +492,51 @@ small
     text-align: center;
 }
 
+/* What Is It Section */
 
+  
+  /*  Bullet Points */
+  .proximity-points {
+    margin: 4rem 6rem;
+  }
+  
+  .proximity-points ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+  
+  .proximity-points li {
+    margin-bottom: 2rem;
+  }
+  
+  .proximity-text-section {
+    margin: 6rem 10rem;
+  }
+  
+  /* Stars */
+  #star-container {
+    position: relative;
+    background-color: #001829;
+    border-radius: 8px;
+    height: 400px;
+    max-width: 1800px;
+    margin: 3rem auto;
+    overflow: hidden;
+  }
+  
+  .star {
+    font-size: 4rem;
+    color: gold;
+    position: absolute;
+    transition: all 1.2s ease;
+    cursor: default;
+  }
+  
+  .caption {
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 2rem;
+  }
 /* Alignment styles */
 .alignment-box {
     max-width: 800px;
