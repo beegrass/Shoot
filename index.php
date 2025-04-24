@@ -5,9 +5,9 @@
 ?>
 <main>
     <div class="hero-container">
+        <img src="assets/images/home_hero.jpg" alt="header image">
         <h1 class="home-h1">CRAP</h1>
         <h2>Design Principles</h2>
-        <img src="assets/images/home_hero.jpg" alt="header image" class="home-hero">
     </div>
     <div class="home-card-container">
         <p>Make your user interfaces more user friendly with CRAP!</p>

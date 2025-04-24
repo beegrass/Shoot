@@ -69,8 +69,6 @@
         </div>   
     </div>
 
-    <script src="assets/js/script.js"></script>
-
     <small>Play Around with the before and after slider to see how contrast matters!</small>
 </main>
 <?php include('assets/inc/footer.php'); ?>
