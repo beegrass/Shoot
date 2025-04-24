@@ -1,5 +1,5 @@
 const container = document.getElementById('star-container');
-const stars = container.querySelectorAll('.star');
+const stars = container.querySelectorAll('.star-prox');
 
 function scatterStars() {
   const containerWidth = container.offsetWidth;

@@ -51,18 +51,18 @@
   
   <div id="star-container">
     <!-- Group A -->
-    <div class="star group-a">★</div>
-    <div class="star group-a">★</div>
-    <div class="star group-a">★</div>
-    <div class="star group-a">★</div>
-    <div class="star group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
 
     <!-- Group B -->
-    <div class="star group-b">☆</div>
-    <div class="star group-b">☆</div>
-    <div class="star group-b">☆</div>
-    <div class="star group-b">☆</div>
-    <div class="star group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
   </div>
   <p class="caption">Hover over the starry sky to see how proximity practices group the stars together</p>
 </section>
