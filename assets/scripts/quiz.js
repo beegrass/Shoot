@@ -10,7 +10,7 @@ document.querySelectorAll('.option').forEach(li => {
 });
 document.getElementById('submitBtn').addEventListener('click', () => {
 
-    answers = 
+    answers =
     {
         q1: "B",
         q2: "C",
@@ -25,38 +25,32 @@ document.getElementById('submitBtn').addEventListener('click', () => {
         q11: "C",
         q12: "B",
     }
-    let score  = 0;
-    for (let k in answers)
-    {
+    let score = 0;
+    for (let k in answers) {
         const selectedAnswer = document.getElementById(k)?.querySelector(".selected")
         const err = document.getElementById("err");
 
-        if (!selectedAnswer)
-        {
+        if (!selectedAnswer) {
             err.textContent = "Please answer all ?s before submitting.";
             return;
         }
 
         err.textContent = ""
         const selectedLetter = selectedAnswer.dataset.answer
-        
-        if (selectedLetter == answers[k])
-        {
+
+        if (selectedLetter == answers[k]) {
             score++;
         }
 
     }
-    for (let k in answers)
-    {
+    for (let k in answers) {
         const options = document.getElementById(k).querySelectorAll('.option');
         options.forEach(option => {
-            if (option.dataset.answer === answers[k]) 
-            {
+            if (option.dataset.answer === answers[k]) {
                 option.style.color = "#178717"
                 option.style.fontWeight = "normal";
             }
-            else if (option.classList.contains("selected"))
-            {
+            else if (option.classList.contains("selected")) {
                 option.style.color = "#E02200"
                 option.style.fontWeight = "normal";
             }
@@ -66,11 +60,9 @@ document.getElementById('submitBtn').addEventListener('click', () => {
 
     err.textContent = "Score: " + score + "/12";
 
-    if (document.getElementById('key').children.length === 0)
-    {
+    if (document.getElementById('key').children.length === 0) {
         document.getElementById('keyh2').textContent = "Answer Key:"
-        for (let key in answers)
-        {
+        for (let key in answers) {
             const num = key.replace("q", "");
             const content = `${num}) ${answers[key]}`;
             const newElement = document.createElement('li');
@@ -80,4 +72,3 @@ document.getElementById('submitBtn').addEventListener('click', () => {
         }
     }
 });
-

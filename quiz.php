@@ -3,9 +3,8 @@
     $filename = 'quiz.php';
     include('assets/inc/nav.php');
 ?>
-<script src="assets/js/quiz.js" defer></script>
-<div class="hero-container">
-    <img src="assets/images/quiz-hero.jpg" alt="quiz">
+<script src="assets/scripts/quiz.js" defer></script>
+<div class="hero-container" style="background-image: url(assets/images/quiz-hero.jpg)">
     <h1>QUIZ</h1>
 </div>
 <div class="quiz-card">

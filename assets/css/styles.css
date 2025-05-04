@@ -20,15 +20,16 @@
 body {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
+    display: flex;
+    flex-direction: column;
 }
-header, .hero-container
-{
-    font-family: 'Bebas Neue', sans-serif;
-}
+
 /* ------------------------- NAVBAR STYLING START ------------------------- */
 /* followed Responsive Multi Level Dropdown Menu with CSS tutorial by smashtheshell  */
-header {
+header 
+{
     background-color: var(--rich-black);
+    font-family: 'Bebas Neue', sans-serif;
     padding-left: 1.5rem;
 }
 
@@ -54,15 +55,13 @@ header {
     flex-direction: row;
     position: relative;
     z-index: 10000;
-
-    
 }
 
 .menu li {
     list-style: none;
 }
-.menu ul
-{
+
+.menu ul {
     flex-grow: 1;
 }
 
@@ -134,8 +133,7 @@ header {
 }
 
 /* fixed a bug with the menu content expanding off the page at certain widths with the 2 @media queries below - robbie*/
-@media (max-width: 1106px) 
-{
+@media (max-width: 1106px) {
     .menu>li>a {
         font-size: 1.3rem;
     }
@@ -144,8 +142,8 @@ header {
         font-size: 1.3rem;
     }
 }
-@media (max-width: 948px) 
-{
+
+@media (max-width: 948px) {
     .menu>li>a {
         font-size: 1.2rem;
     }
@@ -156,7 +154,7 @@ header {
 }
 
 /* responsiveness for mobile screens */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     header {
         position: relative;
         padding: 1.5em 2em;
@@ -175,8 +173,8 @@ header {
         opacity: 0;
         transform: scaleY(0);
         transform-origin: top center;
-        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms, 
-        100ms opacity ease-in-out;
+        transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
+            100ms opacity ease-in-out;
     }
 
     .menu>li>a {
@@ -206,8 +204,7 @@ header {
         user-select: none;
     }
 
-    .hamburger .navicon 
-    {
+    .hamburger .navicon {
         background: var(--saffron);
         display: block;
         width: 50px;
@@ -215,7 +212,7 @@ header {
         position: relative;
         margin-top: 10px;
         transition: background .2s ease-out;
- 
+
     }
 
     /* gives the top and bottom lines */
@@ -233,7 +230,7 @@ header {
     .hamburger .navicon:before {
         top: 15px;
     }
-    
+
     .hamburger .navicon:after {
         top: 30px;
     }
@@ -246,13 +243,14 @@ header {
         transform: rotate(-45deg);
         top: 15px;
     }
+
     .close .navicon::after {
         transform: rotate(45deg);
         top: 15px;
     }
 
     /* reveal menu */
-    input[type="checkbox"]:checked + .menu {
+    input[type="checkbox"]:checked+.menu {
         position: absolute;
         margin-top: 20px;
         opacity: 1;
@@ -265,73 +263,26 @@ header {
 /* ------------------------- NAVBAR STYLING END ------------------------- */
 
 /* ------------------------- HOME PAGE AND WORKS CITED STYLING -------------------------- */
-h1
-{
-    font-size: 15em;
-    position: absolute;
-    color: #f4f4f4;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-}
-.home-h1
-{
-    position: absolute;
-    bottom: 25%;
-    left: 10%;
-    text-align: left;
-    z-index: 100;
-}
-.hero-container h1:not(.hero-container .home-h1)
-{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    width: max-content;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.hero-container h2  /*    homepage is the only one with h2 styled like this    */
-{
-    position: absolute;
-    font-size: 3em;
-    bottom: 20%;
-    left: 10%;
-    color: #f4f4f4;
-    font-family: 'Lato', sans-serif;
-    text-align: left;
-    z-index: 100;
-    width: fit-content;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.hero-container 
-{
-    width: 100%;
-    display: flex;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.home-card-container
-{
+.home-card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
     padding: 50px 20px;
-    
 }
-.home-card-container a
+.home-card-image 
 {
+    height: 600px;
+    object-fit: cover;
+}
+.home-card-container a {
     width: 35%;
     text-decoration: none;
     color: black;
     font-size: 1em;
 }
-.home-card
-{
+
+.home-card {
     display: flex;
     background: white;
     border-radius: 10px;
@@ -345,244 +296,98 @@ h1
     flex-direction: column;
     justify-content: space-between;
 }
-.hero-container img
-{
-    width:100%;
-    height: 550px;
-    object-fit: cover; 
-}
-.home-card:hover 
-{
+
+.home-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.home-card h3
-{
+
+.home-card h3 {
     margin-top: 20px;
 }
-.home-card-container > p
-{
+
+.home-card-container>p {
     text-align: center;
     width: 100%;
 }
-.bold_cards
-{
+
+.bold_cards {
     font-weight: bold;
 }
-.home-card-container p
-{
+
+.home-card-container p {
     font-size: 2em;
 }
-.home-card p
-{
+
+.home-card p {
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
     text-align: left;
     line-height: 1.75em;
     margin-top: 15px;
 }
-.home-card img 
-{
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    border-radius: 8px;
+
+.works-cited-container {
+    font-family: 'Lato', sans-serif;
 }
-.works-cited-container h2
-{
+
+.works-cited-container h2 {
     font-size: 3em;
     margin: 50px 50px 20px 100px;
 }
-.works-cited-container p
-{
+
+.works-cited-container p {
     margin-left: 100px;
     font-size: 1.3em;
-    font-weight:bold;
+    font-weight: bold;
     font-style: italic;
 }
-.works-cited-container a
-{
+
+.works-cited-container a {
     margin-left: 100px;
     margin-bottom: 20px;
     font-size: 1.3em;
-    font-weight:normal;
+    font-weight: normal;
     display: block;
 }
-.works-cited-container a:nth-last-of-type(1)
-{
+
+.works-cited-container a:nth-last-of-type(1) {
     margin-bottom: 75px;
 }
 
 /* HOMEPAGE END */
-footer 
-{
+footer {
     display: flex;
     flex-direction: column;
     background-color: #001829;
     color: #F2F5F8;
+    font-family: 'Lato', sans-serif;
     font-size: 1.2em;
-    margin-top: 100px;
+    margin-top: 5em;
 }
 
-footer > .names {
+footer>.names {
     display: flex;
     justify-content: space-between;
     margin: 12px 12px;
 }
 
-footer > .group {
+footer>.group {
     display: flex;
     justify-content: space-between;
     margin: 12px 12px;
 }
 
+/* QUIZ PAGE */
 
-/* CONTRAST */
-.contrast-main {
-
-    margin: 32px 32px;
-}
-.main-image img{
-
-    width: 25%;
-    float: right;
-    border-radius: 6px;
-
-}
-.contrast-main {
-
-    line-height: normal;
-
-}
-* {box-sizing: border-box;}
-.box-container {
-
-    position: relative;
-    height: 400px;
-    margin-inline: auto;
-
-}
-.contrast {
-
-    position: absolute;
-    overflow:hidden;
-
-}
-.contrast img {
-
-    width: 600px;
-    height: 400px;
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-.slider 
-{
-    position: absolute;
-    z-index: 999;
-    cursor: ew-resize;
-    width: 24px;
-    height: 24px;
-    background-color: #F2F5F8;
-    border: 2px solid #001829;
-    border-radius: 32px;
-}
-small 
-{
-    text-align: center;
-}
-
-/* What Is It Section */
-
-  
-  /*  Bullet Points */
-  .proximity-points {
-    margin: 4rem 6rem;
-  }
-  
-  .proximity-points ul {
-    list-style-type: disc;
+.question-container ul {
+    list-style-type: upper-alpha;
     padding-left: 2rem;
-  }
-  
-  .proximity-points li {
-    margin-bottom: 2rem;
-  }
-  
-  .proximity-text-section {
-    margin: 6rem 10rem;
-  }
-  
-  /* Stars */
-  #star-container {
-    position: relative;
-    background-color: #001829;
-    border-radius: 8px;
-    height: 400px;
-    max-width: 1800px;
-    margin: 3rem auto;
-    overflow: hidden;
-  }
-  
-  .star-prox {
-    font-size: 4rem;
-    color: gold;
-    position: absolute;
-    transition: all 1.2s ease;
-    cursor: default;
-  }
-  
-  .caption {
-    text-align: center;
-    margin: 2rem auto;
-    font-size: 2rem;
-  }
-/* Alignment styles */
-.alignment-box {
-    max-width: 800px;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: #001829;
-    box-sizing: border-box;
-  }
-  
-  .desc {
-    color:#F2F5F8;
-  }
-  
-  #stars .row {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 0.5rem;
-  }
-  
-  .star {
-    font-size: 2rem;
-    color: #FEC74E;
-  }
-  
-  .buttons {
-    display: flex;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
-  
-  .buttons button {
-    flex: 1;
-    padding: 0.75rem;
-    border: none;
-    background: #F2F5F8;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .buttons button.active {
-    background: #708099;
-    color: #F2F5F8;
-  }
+}
 
-  /* Repetition Page Styling */
+
+/* Repetition Styling */
+/* Repetition Page Styling */
 .practice {
     display: flex;
     flex-direction: column;
@@ -602,6 +407,250 @@ small
     margin: 1em 0;
 }
 
+/* Contrast Slider Styling */
+.box-container {
+    width: 600px;
+    align-self: center;
+    position: relative;
+    height: 400px;
+}
+
+.contrast {
+    position: absolute;
+    overflow: hidden;
+}
+
+.contrast img {
+    width: 600px;
+    height: 400px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: #001829 solid 1px;
+    border-radius: 10px;
+}
+
+.slider {
+    position: absolute;
+    z-index: 999;
+    cursor: ew-resize;
+
+    width: 24px;
+    height: 24px;
+    background-color: #F2F5F8;
+    border: 2px solid #001829;
+    border-radius: 32px;
+}
+
+small {
+    text-align: center;
+}
+
+/* Alignment styles */
+.alignment-box {
+    max-width: 800px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #001829;
+    box-sizing: border-box;
+}
+
+.desc {
+    color: #F2F5F8;
+}
+
+#stars .row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.star {
+    font-size: 2rem;
+    color: #FEC74E;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: #F2F5F8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons button.active {
+    background: #708099;
+    color: #F2F5F8;
+}
+
+.hero-home {
+    background-image: url('../images/home_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em;
+    position: relative;
+}
+
+.hero-home h1 {
+    color: var(--white);
+    font-family: 'Bebas Neue';
+    font-size: 20vw;
+    bottom: 25%;
+    position: absolute;
+}
+
+.hero-home h2 {
+    color: var(--white);
+    font-family: 'Lato';
+    font-size: 7vw;
+    bottom: 20%;
+    position: absolute;
+}
+
+.hero-container {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.hero-container h1 {
+    color: var(--white);
+    font-family: 'Bebas Neue';
+    font-size: 20vw;
+}
+
+@media screen and (max-width: 700px) {
+    .hero-home {
+        align-items: center;
+        height: 50vw;
+    }
+
+    .hero-container {
+        height: 50vw;
+    }
+}
+
+.what {
+    color: var(--rich-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.def-img {
+    display: flex;
+    gap: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.def-img img {
+    width: 35vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+.what-desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 3em;
+}
+
+.what-list li 
+{
+    margin: 1.5em 0;
+}
+.what-list
+{
+    list-style-position: inside;
+    align-self: baseline;
+}
+.def-img p, .what-list, .reg p, .reg div, .what-desc p
+{
+    margin-left: 3em;
+}
+.what-desc p
+{
+    width: 70%;
+}
+.reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    max-width: 70%;
+    margin: auto;
+}
+.reg, .what
+{
+    margin-bottom: 2.5em;
+}
+
+/* .reg h2 {
+    margin: 2em 0 0 2em;
+} */
+
+.principle-pract {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    margin: auto 15vw 2em 15vw;
+    max-width: 70%;
+}
+/* .principle-pract h2 
+{
+    margin: 2em 0 0 2em;
+} */
+.caption {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+/* ------------------------- PROXIMITY STYLES ------------------------- */
+/* Stars */
+#star-container {
+    position: relative;
+    background-color: #001829;
+    border-radius: 8px;
+    height: 400px;
+    max-width: 1800px;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+.star-prox {
+    font-size: 4rem;
+    color: gold;
+    position: absolute;
+    transition: all 1.2s ease;
+    cursor: default;
+}
+
 /* QUIZ PAGE */
 .quiz-card
 {
@@ -610,7 +659,7 @@ small
 }
 .quiz-card h2
 {
-    margin: 20px 0;
+    margin: 2em 0;
 }
 .question-container ul li:nth-last-of-type(1)
 {
@@ -654,27 +703,35 @@ small
 {
     color: red;
 }
-@media only screen and (max-width: 620px){
-    footer > .names {
+
+
+@media only screen and (max-width: 620px) {
+    footer>.names {
         display: block;
     }
 
-    footer > .group {
+    footer>.group {
         display: block;
     }
 }
 
 @media (max-width: 1024px) {
-    .hero-container h1 {
-        font-size: 10em;
-        left: 5%;
+    .def-img img
+    {
+        width: 50vw;
+        height: auto;
     }
-
-    .hero-container h2 {
-        font-size: 3em;
-        left: 5%;
+    .def-img 
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
     }
-
+    .what-desc
+    {
+        min-width: 100%;
+        gap: 10px;
+    }
     .home-card-container a {
         width: 45%;
     }
@@ -682,42 +739,35 @@ small
     .home-card {
         height: 60vh;
     }
-    
+
     .works-cited-container h2 {
         margin: 40px 40px 20px 60px;
         font-size: 2.5em;
     }
-    
+
     .works-cited-container p,
     .works-cited-container a {
         margin-left: 60px;
         font-size: 1.2em;
     }
-    
+
 }
 
 @media (max-width: 768px) {
-    .hero-container h1 {
-        position: absolute;
-        top: 50%;
-        font-size: 7em;
-    }
-
-    .hero-container h2 {
-        font-size: 2em;
-    }
-    .hero-container img, .hero-container
+    .what, .reg, .principle-pract
     {
-        height: 350px;
+        margin: auto 0 2em 0;
+        align-self: center;
     }
     .home-card-container {
         gap: 30px;
         padding: 30px 10px;
     }
-    .home-card-container p
-    {
+
+    .home-card-container p {
         font-size: 1.5em;
     }
+
     .home-card-container a {
         width: 90%;
     }
@@ -734,32 +784,24 @@ small
     .home-card p {
         font-size: 1.1em;
     }
+
     .works-cited-container h2 {
         margin: 30px 30px 20px 30px;
         font-size: 2em;
     }
-    
+
     .works-cited-container p,
     .works-cited-container a {
         margin-left: 30px;
         font-size: 1.1em;
     }
-    footer
-    {
+
+    footer {
         font-size: 1em;
     }
 }
-@media (max-width: 480px) 
-{
-    .hero-container h1 
-    {
-        font-size: 5em;
-    }
 
-    .hero-container h2 {
-        font-size: 1.5em;
-    }
-
+@media (max-width: 480px) {
     .home-card-container a {
         width: 100%;
     }
@@ -776,12 +818,13 @@ small
     .home-card p {
         font-size: 1em;
     }
-    .logo
-    {
+
+    .logo {
         width: 180px;
         height: 60px;
         margin: 0;
     }
+
     .hamburger {
         cursor: pointer;
         padding: 28px 20px;
@@ -790,12 +833,13 @@ small
         top: -.25em;
         user-select: none;
     }
+
     .works-cited-container h2 {
         margin: 25px 20px 15px 20px;
         font-size: 1.5em;
         text-align: left;
     }
-    
+
     .works-cited-container p,
     .works-cited-container a {
         margin-left: 20px;

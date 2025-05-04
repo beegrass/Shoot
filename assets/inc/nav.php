@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-    <script src="assets/js/script.js" defer></script> 
+    <script src="assets/scripts/script.js" defer></script>
     <title><?php echo $title ?></title>
 </head>
 
