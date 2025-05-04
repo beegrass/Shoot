@@ -610,46 +610,51 @@ small {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 40vw;
+    height: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 5em;
     position: relative;
+    box-shadow: 1px 1px 5px var(--gunmetal);
 }
 
 .hero-home h1 {
     color: var(--white);
     font-family: 'Bebas Neue';
     font-size: 20vw;
-    bottom: 25%;
+    bottom: 20%;
     position: absolute;
+    text-shadow: 1px 1px 5px var(--lake-blue);
 }
 
 .hero-home h2 {
     color: var(--white);
     font-family: 'Lato';
     font-size: 7vw;
-    bottom: 20%;
+    bottom: 15%;
     position: absolute;
+    text-shadow: 1px 1px 5px var(--lake-blue);
 }
 
 .hero-container {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 40vw;
+    height: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5em;
+    box-shadow: 1px 1px 5px var(--gunmetal);
 }
 
 .hero-container h1 {
     color: var(--white);
     font-family: 'Bebas Neue';
     font-size: 20vw;
+    text-shadow: 1px 1px 5px var(--saffron);
 }
 
 @media screen and (max-width: 700px) {
