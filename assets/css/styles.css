@@ -579,7 +579,6 @@ small {
     max-width: 100%;
     gap: 3em;
 }
-
 .what-list li 
 {
     margin: 1.5em 0;
@@ -593,19 +592,15 @@ small {
 {
     margin-left: 3em;
 }
-.what-desc p
-{
-    width: 70%;
-}
 .reg {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2em;
     max-width: 70%;
-    margin: auto;
+    margin: auto 15vw 2.5em 15vw;
 }
-.reg, .what
+.what
 {
     margin-bottom: 2.5em;
 }
@@ -614,13 +609,20 @@ small {
     margin: 2em 0 0 2em;
 } */
 
-.principle-pract {
+.principle-pract
+{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2em;
     margin: auto 15vw 2em 15vw;
     max-width: 70%;
+}
+.alignment-box, #star-container
+{
+    align-self: center;
+    min-width: none;
+    width: 70%;
 }
 /* .principle-pract h2 
 {
@@ -639,7 +641,6 @@ small {
     border-radius: 8px;
     height: 400px;
     max-width: 1800px;
-    min-width: 400px;
     overflow: hidden;
 }
 
@@ -729,7 +730,6 @@ small {
     }
     .what-desc
     {
-        min-width: 100%;
         gap: 10px;
     }
     .home-card-container a {
@@ -754,6 +754,22 @@ small {
 }
 
 @media (max-width: 768px) {
+    .alignment-box, #star-container, .principle-pract, .what, .reg
+    {
+        max-width: none;
+        min-width: none;
+        width: 100%;
+        
+    }
+    .alignment-box, .what img
+    {
+        border-radius: 0;
+    }
+    .def-img img
+    {
+        width: 100%;
+        height: auto;
+    }
     .what, .reg, .principle-pract
     {
         margin: auto 0 2em 0;
@@ -799,9 +815,19 @@ small {
     footer {
         font-size: 1em;
     }
+    .what h2, .reg h2, .principle-pract h2
+    {
+        margin-left: .8em;
+    }
+    .what p, .reg div, .what ul
+    {
+        margin-left: 2.4em;
+        width: 90%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) 
+{
     .home-card-container a {
         width: 100%;
     }
@@ -834,7 +860,8 @@ small {
         user-select: none;
     }
 
-    .works-cited-container h2 {
+    .works-cited-container h2 
+    {
         margin: 25px 20px 15px 20px;
         font-size: 1.5em;
         text-align: left;
@@ -846,5 +873,28 @@ small {
         margin-right: 20px;
         font-size: 1em;
         word-break: break-word;
+    }
+    .principle-pract
+    {
+        width: 100%;
+    }
+    .reg, .what, .principle-pract
+    {
+        max-width: none;
+        min-width: none;
+        width: 100%;
+        font-size: .8em;
+    }
+    .what img
+    {
+        border-radius: 0;
+    }
+}
+@media (max-width: 480px) 
+{
+    .what p, .reg div, .what ul
+    {
+        margin-left: 1.6em;
+        width: 90%;
     }
 }

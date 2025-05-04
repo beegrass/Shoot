@@ -38,8 +38,8 @@ function groupStars() {
       bIndex++;
     }
 
-    star.style.left = `${x}px`;
-    star.style.top = `${y}px`;
+    star.style.left = `${x-30}px`;
+    star.style.top = `${y-30}px`;
   });
 }
 
