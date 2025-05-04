@@ -23,7 +23,11 @@ $descList = array(
                     improving readability and visual appeal."
 );
 
-$importance = "";
+$importance = "Alignment is important because it helps to create a visually appealing and organized layout. 
+            If implemented properly, it makes content easier to scan, which improves readability and enhances the overall experience for the user.
+            Proper Alignment also establishes a clear hierarchy, which guides the user's attention and creates a sense of order and professionalism.
+            Alignment plays a crucial role in responsive web design. By aligning elements well, you ensure that the content reorganizes appropriately 
+            across screen sizes.";
 
 $whyUse = "";
 
