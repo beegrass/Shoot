@@ -78,7 +78,7 @@ window.onload = initComparisons;
 // Alignment Scripts
 const STAR_ROWS = [4, 3, 2, 1];
 const STAR_SHAPES = ['★', '✶', '✸', '✦'];
-const container = document.getElementById('stars');
+const alignmentContainer = document.getElementById('stars');
 
 function createStar() {
     const star = document.createElement('div');
@@ -91,7 +91,7 @@ function createRow(count) {
     const row = document.createElement('div');
     row.className = 'row';
     for (let i = 0; i < count; i++) row.appendChild(createStar());
-    container.appendChild(row);
+    alignmentContainer.appendChild(row);
 }
 
 function initStars() {

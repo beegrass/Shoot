@@ -1,13 +1,15 @@
-<div class="hero-container">
+<div class="hero-container" style="background-image: url(<?php echo $heroImg; ?>)">
     <h1><?php echo strtoupper($title); ?></h1>
-    <img src="<?php echo $heroImg; ?>" alt="hero image" class="contrast-hero">
 </div>
-<section>
-<aside class="main-image"><img src="<?php echo $mainImg; ?>" alt="<?php echo $imgAltText; ?>"></aside>
-    <h2>What Is It?</h2>
-    <p><?php echo $principleDesc; ?></p>
-    
-    <ul>
+<section class="what">
+    <div class="def-img">
+        <div class="what-desc">
+            <h2>What Is It?</h2>
+            <p><?php echo $principleDesc; ?></p>
+        </div>
+        <img src="<?php echo $mainImg; ?>" alt="<?php echo $imgAltText; ?>">
+    </div>
+    <ul class="what-list">
         <?php
         foreach ($descList as $listPoint):
         ?>
@@ -15,17 +17,17 @@
         <?php endforeach; ?>
     </ul>
 </section>
-<section>
+<section class="reg">
     <h2>Importance</h2>
     <p><?php echo $importance; ?></p>
 </section>
-<section>
+<section class="reg">
     <h2>Why Use It?</h2>
     <p><?php echo $whyUse; ?></p>
 </section>
-<section>
+<section class="reg">
     <h2>Accessibility</h2>
     <div><?php echo $accessibility; ?></div>
 </section>
-<section>
+<section class="principle-pract">
     <h2>In Practice</h2>

@@ -3,8 +3,7 @@
     $filename = 'quiz.php';
     include('assets/inc/nav.php');
 ?>
-<div class="hero-container">
-    <img src="assets/images/quiz-hero.jpg" alt="quiz">
+<div class="hero-container" style="background-image: url(assets/images/quiz-hero.jpg)">
     <h1>QUIZ</h1>
 </div>
 <div class="quiz-card">

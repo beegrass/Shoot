@@ -37,7 +37,7 @@ include('assets/inc/principle.php');
     </div>
 </div>
 
-<small>Play Around with the before and after slider to see how contrast matters!</small>
+<p class="caption">Play Around with the before and after slider to see how contrast matters!</p>
 </section>
 </main>
 <?php include('assets/inc/footer.php'); ?>

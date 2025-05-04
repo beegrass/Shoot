@@ -260,68 +260,6 @@ header {
 /* ------------------------- NAVBAR STYLING END ------------------------- */
 
 /* ------------------------- HOME PAGE AND WORKS CITED STYLING -------------------------- */
-.home-hero {
-    width: 100%;
-    align-items: center;
-    height: auto;
-    max-height: 60vh;
-    object-fit: cover;
-    position: relative;
-}
-
-h1 {
-    font-size: 15em;
-    position: absolute;
-    color: #f4f4f4;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-}
-
-.home-h1 {
-    position: absolute;
-    bottom: 25%;
-    left: 10%;
-    text-align: left;
-    z-index: 100;
-}
-
-.hero-container h1:not(.hero-container .home-h1) {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    width: max-content;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-container h2
-
-/*    homepage is the only one with h2 styled like this    */
-    {
-    position: absolute;
-    font-family: 'Lato', sans-serif;
-    font-size: 3em;
-    bottom: 20%;
-    left: 10%;
-    color: #f4f4f4;
-    text-align: left;
-    z-index: 100;
-    width: fit-content;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    position: relative;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
 .home-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -350,12 +288,6 @@ h1 {
     height: 70vh;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.hero-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
 }
 
 .home-card:hover {
@@ -460,16 +392,6 @@ footer>.group {
 }
 
 @media (max-width: 1024px) {
-    .hero-container h1 {
-        font-size: 10em;
-        left: 5%;
-    }
-
-    .hero-container h2 {
-        font-size: 3em;
-        left: 5%;
-    }
-
     .home-card-container a {
         width: 45%;
     }
@@ -492,14 +414,6 @@ footer>.group {
 }
 
 @media (max-width: 768px) {
-    .hero-container h1 {
-        font-size: 7em;
-    }
-
-    .hero-container h2 {
-        font-size: 2em;
-    }
-
     .home-card-container {
         gap: 30px;
         padding: 30px 10px;
@@ -543,14 +457,6 @@ footer>.group {
 }
 
 @media (max-width: 480px) {
-    .hero-container h1 {
-        font-size: 5em;
-    }
-
-    .hero-container h2 {
-        font-size: 1.5em;
-    }
-
     .home-card-container a {
         width: 100%;
     }
@@ -623,7 +529,6 @@ footer>.group {
 .box-container {
     position: relative;
     height: 400px;
-    margin-inline: auto;
 }
 
 .contrast {
@@ -638,6 +543,8 @@ footer>.group {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: #001829 solid 1px;
+    border-radius: 10px;
 }
 
 .slider {
@@ -700,3 +607,148 @@ small {
     background: #708099;
     color: #F2F5F8;
 }
+
+.hero-home {
+    background-image: url('../images/home_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5em;
+    position: relative;
+}
+
+.hero-home h1 {
+    color: var(--white);
+    font-family: 'Bebas Neue';
+    font-size: 20vw;
+    bottom: 25%;
+    position: absolute;
+}
+
+.hero-home h2 {
+    color: var(--white);
+    font-family: 'Lato';
+    font-size: 7vw;
+    bottom: 20%;
+    position: absolute;
+}
+
+.hero-container {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.hero-container h1 {
+    color: var(--white);
+    font-family: 'Bebas Neue';
+    font-size: 20vw;
+}
+
+@media screen and (max-width: 700px) {
+    .hero-home {
+        align-items: center;
+        height: 50vw;
+    }
+
+    .hero-container {
+        height: 50vw;
+    }
+}
+
+.what {
+    color: var(--rich-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.def-img {
+    display: flex;
+    gap: 5em;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em;
+}
+
+.def-img img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.what-desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    gap: 3em;
+}
+
+.what-list li {
+    margin: 1.5em 0;
+}
+
+.reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    max-width: 70%;
+    margin: auto;
+}
+
+.reg h2 {
+    margin: 2em 0 0 2em;
+}
+
+.principle-pract {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.principle-pract h2 {
+    margin: 2em 0 0 2em;
+}
+.caption {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+/* ------------------------- PROXIMITY STYLES ------------------------- */
+/* Stars */
+#star-container {
+    position: relative;
+    background-color: #001829;
+    border-radius: 8px;
+    height: 400px;
+    max-width: 1800px;
+    min-width: 400px;
+    margin: 3rem auto;
+    overflow: hidden;
+}
+
+.star-prox {
+    font-size: 4rem;
+    color: gold;
+    position: absolute;
+    transition: all 1.2s ease;
+    cursor: default;
+}
+

@@ -27,4 +27,24 @@ $accessibility = "Proximity considers different visual impairments by creating c
 include('assets/inc/principle.php');
 ?>
 
+  
+  <div id="star-container">
+    <!-- Group A -->
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+    <div class="star-prox group-a">★</div>
+
+    <!-- Group B -->
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+    <div class="star-prox group-b">☆</div>
+  </div>
+  <p class="caption">Hover over the starry sky to see how proximity practices group the stars together</p>
+</section>
+
+<script src="./assets/scripts/proximity.js"></script>
 <?php include('assets/inc/footer.php'); ?>
