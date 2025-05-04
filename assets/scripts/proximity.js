@@ -1,9 +1,9 @@
-const proxContainer = document.getElementById('star-container');
-const stars = proxContainer.querySelectorAll('.star');
+const container = document.getElementById('star-container');
+const stars = container.querySelectorAll('.star-prox');
 
 function scatterStars() {
-  const containerWidth = proxContainer.offsetWidth;
-  const containerHeight = proxContainer.offsetHeight;
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
 
   stars.forEach(star => {
     const x = Math.random() * (containerWidth - 30);
@@ -14,8 +14,8 @@ function scatterStars() {
 }
 
 function groupStars() {
-  const containerWidth = proxContainer.offsetWidth;
-  const containerHeight = proxContainer.offsetHeight;
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
   const centerLeft = { x: containerWidth * 0.25, y: containerHeight * 0.5 };
   const centerRight = { x: containerWidth * 0.75, y: containerHeight * 0.5 };
   const radius = 50;
@@ -43,7 +43,7 @@ function groupStars() {
   });
 }
 
-proxContainer.addEventListener('mouseenter', groupStars);
-proxContainer.addEventListener('mouseleave', scatterStars);
+container.addEventListener('mouseenter', groupStars);
+container.addEventListener('mouseleave', scatterStars);
 
 scatterStars();
