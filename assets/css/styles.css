@@ -409,10 +409,10 @@ footer>.group {
 
 /* Contrast Slider Styling */
 .box-container {
-    width: 600px;
-    align-self: center;
     position: relative;
+    margin: 2rem auto;
     height: 400px;
+    width: 600px;
 }
 
 .contrast {
@@ -431,6 +431,50 @@ footer>.group {
     border-radius: 10px;
 }
 
+.mobile-image, .middle-image {
+    display: none;
+}
+
+@media only screen and (max-width: 854px) and (min-width: 575px) {
+    .box-container {
+        max-height: 270px;
+        max-width: 480px;
+    }
+    .contrast img {
+        width: 480px;
+        height: 270px;
+    }
+    .mobile-image {
+        display: block
+    }
+    .desktop-image {
+        display: none;
+    }
+    .middle-image {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    .box-container {
+        max-height: 181px;
+        max-width: 320px;
+    }
+    .contrast img {
+        width: 320px;
+        height: 181px;
+    }
+    .mobile-image {
+        display: block
+    }
+    .desktop-image {
+        display: none;
+    }
+    .middle-image {
+        display: none;
+    }
+}
+
 .slider {
     position: absolute;
     z-index: 999;
@@ -441,10 +485,6 @@ footer>.group {
     background-color: #F2F5F8;
     border: 2px solid #001829;
     border-radius: 32px;
-}
-
-small {
-    text-align: center;
 }
 
 /* Alignment styles */
