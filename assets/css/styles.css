@@ -386,6 +386,25 @@ footer>.group {
 }
 
 
+p {
+    font-size: 1.2rem;
+    line-height: 32px;
+}
+
+li {
+    font-size: 1.2rem;
+}
+
+.contrast-accesibility li{
+    position: relative;
+    margin-left: 96px;
+}
+
+#big-header {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 /* Repetition Styling */
 /* Repetition Page Styling */
 .practice {
