@@ -847,6 +847,10 @@ li {
     }
     p {
         margin-right: 32px;
+        font-size: 1.1rem;
+    }
+    .contrast-accesibility li, li {
+        font-size: 1.15em;
     }
     .home-card-container {
         gap: 30px;
