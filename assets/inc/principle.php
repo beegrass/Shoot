@@ -4,8 +4,8 @@
 <section class="what">
     <div class="def-img">
         <div class="what-desc">
-            <h2>What Is It?</h2>
-            <p><?php echo $principleDesc; ?></p>
+            <h2 class="big-header">What Is It?</h2>
+            <p class="p-desc"><?php echo $principleDesc; ?></p>
         </div>
         <img src="<?php echo $mainImg; ?>" alt="<?php echo $imgAltText; ?>">
     </div>
@@ -19,7 +19,7 @@
     </ul>
 </section>
 <section class="reg">
-    <h2 id='big-header'>Why Use It?</h2>
+    <h2 class="big-header">Why Use It?</h2>
 </section>
 <section class="reg">
     <h2>Importance</h2>
@@ -30,4 +30,4 @@
     <div><?php echo $accessibility; ?></div>
 </section>
 <section class="principle-pract">
-    <h2>In Practice</h2>
+    <h2 class="big-header">In Practice</h2>
