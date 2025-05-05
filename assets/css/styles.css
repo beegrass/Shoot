@@ -291,11 +291,17 @@ header
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     padding: 20px;
-    margin: 10px 64px;
+    margin: 0 10px;
     width: 75%;
     height: 50vh;
     flex-direction: column;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+    .home-card{
+        width: 100%;
+    }
 }
 
 .home-card:hover {
@@ -392,6 +398,10 @@ p {
     line-height: 32px;
 }
 
+.p-desc {
+    margin: 0 48px;
+}
+
 li {
     font-size: 1.2rem;
 }
@@ -401,7 +411,8 @@ li {
     margin-left: 96px;
 }
 
-#big-header {
+.big-header {
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -556,7 +567,7 @@ li {
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 40vw;
+    height: 32vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -567,7 +578,7 @@ li {
 .hero-home h1 {
     color: var(--white);
     font-family: 'Bebas Neue';
-    font-size: 20vw;
+    font-size: 16vw;
     bottom: 25%;
     position: absolute;
 }
@@ -575,7 +586,7 @@ li {
 .hero-home h2 {
     color: var(--white);
     font-family: 'Lato';
-    font-size: 7vw;
+    font-size: 4vw;
     bottom: 20%;
     position: absolute;
 }
@@ -833,6 +844,9 @@ li {
     {
         margin: auto 0 2em 0;
         align-self: center;
+    }
+    p {
+        margin-right: 32px;
     }
     .home-card-container {
         gap: 30px;
