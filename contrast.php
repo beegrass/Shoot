@@ -30,10 +30,14 @@ include('assets/inc/principle.php');
 
 <div class="box-container">
     <div class="contrast with">
-        <img src="assets/images/bcontrast.jpg">
+        <img id="desktopContrast" class="desktop-image" src="assets/images/bcontrast.jpg">
+        <img id="middleContrast" class="middle-image" src="assets/images/bcontrast_sm.jpg">
+        <img id="mobileContrast" class="mobile-image" src="assets/images/bcontrast_sm.jpg">
     </div>
     <div class="contrast without">
-        <img src="assets/images/gcontrast.jpg">
+        <img class="desktop-image" src="assets/images/gcontrast.jpg">
+        <img class="middle-image" src="assets/images/gcontrast_sm.jpg">
+        <img class="mobile-image" src="assets/images/gcontrast_sm.jpg">
     </div>
 </div>
 
