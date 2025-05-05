@@ -14,9 +14,9 @@ $descList = array(
     "<b>Spacing & Layout:</b> Ensuring consistent padding, margins, and grid structures."
 );
 
-$importance = "Repetition creates cohesion and unity among your pages, which makes the site easier to navigate and aesthetically pleasing. <br><br> 
-                Repetition enhances readability by creating a structured layout, creating familiarity for the user to guide the eye and improve the flow of your content reading. <br><br>
-                A consistent structure can help users predict where key elements are, such as the nav bar, creating a better experience for users.";
+$importance = "Repetition creates cohesion and unity among your pages, which makes the site easier to navigate and aesthetically pleasing. It also
+                enhances readability by creating a structured layout, creating familiarity for the user to guide the eye and improve the flow of your content reading.
+                Using repetition to generate a consistent structure can help users predict where key elements are, such as the nav bar, creating a better experience for users.";
 
 $whyUse = "";
 
