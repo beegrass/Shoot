@@ -16,13 +16,11 @@ $descList = array(
 
 $importance = "Proximity reduces the need for visual interpretations (e.g. lines and borders between items) by allowing the user to form connections between items based on their position to other items on an interface. This principle offers great visual clarity, enhancing the readability of a website. ";
 
-$whyUse = "";
-
-$accessibility = "Proximity considers different visual impairments by creating clear
+$accessibility = "<p>Proximity considers different visual impairments by creating clear
                     visual distinctions between the content of the site. An effective
                     implementation also decreases the cognitive load experienced by the
                     user, as it reduces the mental effort needed by the user to form
-                    connections and relationships between items.";
+                    connections and relationships between items.</p>";
 
 include('assets/inc/principle.php');
 ?>
