@@ -19,12 +19,11 @@
     </ul>
 </section>
 <section class="reg">
-    <h2>Importance</h2>
-    <p><?php echo $importance; ?></p>
+    <h2 id='big-header'>Why Use It?</h2>
 </section>
 <section class="reg">
-    <h2>Why Use It?</h2>
-    <p><?php echo $whyUse; ?></p>
+    <h2>Importance</h2>
+    <p><?php echo $importance; ?></p>
 </section>
 <section class="reg">
     <h2>Accessibility</h2>
