@@ -25,16 +25,14 @@ $descList = array(
 
 $importance = "Alignment is important because it helps to create a visually appealing and organized layout. If implemented properly, it makes content easier to scan, which improves readability and enhances the overall experience for the user. Proper Alignment also establishes a clear hierarchy, which guides the user's attention and creates a sense of order and professionalism. Alignment plays a crucial role in responsive web design. By aligning elements well, you ensure that the content reorganizes appropriately across screen sizes.";
 
-$whyUse = "";
-
-$accessibility = "A site's accessibility is improved through proper alignment, as it creates
+$accessibility = "<p>A site's accessibility is improved through proper alignment, as it creates
             predictable interaction areas. With this, users with motor impairments can
             find and interact with certain elements without confusion. An example of
             proper alignment is keeping the form fields aligned across different pages
             to reduce the effort to navigate through the form. It is important; however,
             to responsibly implement center-aligning text. This alignment is often good for
             a small amount of text, but it could decrease how readable your site is when
-            used for bigger chunks.";
+            used for bigger chunks.</p>";
 
 include('assets/inc/principle.php');
 ?>
