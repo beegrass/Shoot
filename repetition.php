@@ -18,10 +18,8 @@ $importance = "Repetition creates cohesion and unity among your pages, which mak
                 enhances readability by creating a structured layout, creating familiarity for the user to guide the eye and improve the flow of your content reading.
                 Using repetition to generate a consistent structure can help users predict where key elements are, such as the nav bar, creating a better experience for users.";
 
-$whyUse = "";
-
-$accessibility = "All users can benefit from the proper implementation of repetition. Through the consistency and predictability of a site's layout, content structure, and navigation, the cognitive load on a user is decreased, as they will only need to take in those elements once and will better retain the information that a site is conveying. <br><br>
-                    A repetition of style can also benefit those with color blindness, as they won't need to interpret the color schemes of each individual page.";
+$accessibility = "<p>All users can benefit from the proper implementation of repetition. Through the consistency and predictability of a site's layout, content structure, and navigation, the cognitive load on a user is decreased, as they will only need to take in those elements once and will better retain the information that a site is conveying. <br><br>
+                    A repetition of style can also benefit those with color blindness, as they won't need to interpret the color schemes of each individual page.</p>";
 
 include('assets/inc/principle.php');
 ?>
