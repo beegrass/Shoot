@@ -19,7 +19,7 @@
         <a href="repetition.php">
             <div class="home-card">
                 <img class="home-card-image" src="assets/images/repetition_card.jpg" alt="repetition card image">
-                <p><span class="bold_cards">Repetition</span> unifies a website through the use of consistent designs, colors, and styles throughout all pages</p>
+                <p><span class="bold_cards">Repetition</span> unifies a website through the use of consistent designs, colors, and styles throughout all pages.</p>
             </div>
         </a>
         <a href="alignment.php">

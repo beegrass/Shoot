@@ -263,47 +263,55 @@ header
 /* ------------------------- NAVBAR STYLING END ------------------------- */
 
 /* ------------------------- HOME PAGE AND WORKS CITED STYLING -------------------------- */
-.home-card-container {
+.home-card-container 
+{
     display: flex;
+    padding-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    padding: 50px 20px;
 }
 
-.home-card-image 
-{
-    height: 400px;
+.home-card-image {
+    aspect-ratio: 4 / 3;
+    width: 100%;
     object-fit: cover;
+    display: block;
+    height: 400px;
 }
 .home-card-container a {
-    width: 35%;
+    width: 40%;
     text-decoration: none;
     color: black;
     font-size: 1em;
+    display: flex;
 }
 
 .home-card {
     display: flex;
+    flex-direction: column;
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
-    padding: 20px;
-    margin: 0 10px;
-    width: 75%;
-    height: 50vh;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    height:500px;
 }
-
-@media only screen and (max-width: 1000px) {
-    .home-card{
-        width: 100%;
-    }
+.home-card-container p {
+    font-size: 2em;
 }
-
+.home-card p {
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    padding: 1em;
+    margin: 0;
+    align-items: center;
+    line-height: 1.5;
+    overflow: hidden;
+    min-height: 100px;
+}
 .home-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -320,18 +328,6 @@ header
 
 .bold_cards {
     font-weight: bold;
-}
-
-.home-card-container p {
-    font-size: 2em;
-}
-
-.home-card p {
-    font-size: 1.3em;
-    font-family: 'Lato', sans-serif;
-    text-align: left;
-    line-height: 1.75em;
-    margin-top: 15px;
 }
 
 .works-cited-container {
@@ -618,6 +614,20 @@ li {
     .hero-container {
         height: 50vw;
     }
+    .hero-home h1, .hero-home h2
+    {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-home h1
+    {
+        font-size: 8em;
+    }
+    .hero-home h2
+    {
+        font-size: 3em;
+        bottom: 15%;
+    }
 }
 
 .what {
@@ -802,14 +812,6 @@ li {
     {
         gap: 10px;
     }
-    .home-card-container a {
-        width: 45%;
-    }
-
-    .home-card {
-        height: 60vh;
-    }
-
     .works-cited-container h2 {
         margin: 40px 40px 20px 60px;
         font-size: 2.5em;
@@ -819,6 +821,10 @@ li {
     .works-cited-container a {
         margin-left: 60px;
         font-size: 1.2em;
+    }
+    .home-card-container>p
+    {
+        font-size: 1.5em;
     }
 
 }
@@ -845,7 +851,8 @@ li {
         margin: auto 0 2em 0;
         align-self: center;
     }
-    p {
+    .def-img p, .reg p 
+    {
         margin-right: 32px;
         font-size: 1.1rem;
     }
@@ -856,28 +863,6 @@ li {
         gap: 30px;
         padding: 30px 10px;
     }
-
-    .home-card-container p {
-        font-size: 1.5em;
-    }
-
-    .home-card-container a {
-        width: 90%;
-    }
-
-    .home-card {
-        height: auto;
-        padding: 15px;
-    }
-
-    .home-card-image {
-        height: 250px;
-    }
-
-    .home-card p {
-        font-size: 1.1em;
-    }
-
     .works-cited-container h2 {
         margin: 30px 30px 20px 30px;
         font-size: 2em;
@@ -901,25 +886,27 @@ li {
         margin-left: 2.4em;
         width: 90%;
     }
+    .home-card-container a
+    {
+        width: 100%;
+        height: 440px;
+    }
+    .home-card
+    {
+        width: 100%;
+        height: 440px;
+    }
+    .home-card-container>p
+    {
+        font-size: 1.2em;
+    }
+    
 }
 
 @media (max-width: 480px) 
 {
     .home-card-container a {
         width: 100%;
-    }
-
-    .home-card {
-        height: auto;
-        margin: 0
-    }
-
-    .home-card-image {
-        height: 200px;
-    }
-
-    .home-card p {
-        font-size: 1em;
     }
 
     .logo {
@@ -966,12 +953,36 @@ li {
     {
         border-radius: 0;
     }
-}
-@media (max-width: 480px) 
-{
     .what p, .reg div, .what ul
     {
         margin-left: 1.6em;
         width: 90%;
+    }
+    .hero-home h1
+    {
+        font-size: 6em;
+    }
+    .hero-home h2
+    {
+        font-size: 2em;
+    }
+
+}
+@media (max-width: 1290px) {
+    .home-card-image
+    {
+        height: 375px;
+    }
+}
+@media (max-width: 878px) {
+    .home-card-image
+    {
+        height: 340px;
+    }
+}
+@media (max-width: 536px) {
+    .home-card
+    {
+        font-size: .9em;
     }
 }
